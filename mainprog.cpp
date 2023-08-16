@@ -33,6 +33,27 @@ public:
         else if (direction == "Down") z++;
         //cout<<direction<<"\n";
     }
+    void turn_left() {
+        std::vector<std::string> directions = {"N", "W", "S", "E"};
+        if(direction=="Up") direction="N";
+        else{
+            size_t current_index = std::find(directions.begin(), directions.end(), direction) - directions.begin();
+        direction = directions[(current_index + 1) % directions.size()];
+            
+        }
+        
+        //cout<<direction<<"\n";
+    }
+
+    void turn_right() {
+        std::vector<std::string> directions = {"N", "W", "S", "E"};
+        if(direction=="Down") direction="S";
+        else{
+            size_t current_index = std::find(directions.begin(), directions.end(), direction) - directions.begin();
+            direction = directions[(current_index - 1 + directions.size()) % directions.size()];
+        }
+        //cout<<direction<<"\n";
+    }
 };
 
 
