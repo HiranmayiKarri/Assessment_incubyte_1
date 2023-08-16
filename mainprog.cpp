@@ -13,6 +13,26 @@ public:
         this->z = z;
         this->direction = direction;
     }
+
+    void move_forward() {
+        if (direction == "N") y++;
+        else if (direction == "S") y--;
+        else if (direction == "E") x++;
+        else if (direction == "W") x--;
+        else if (direction == "Up") z++;
+        else if (direction == "Down") z--;
+        //cout<<direction<<"\n";
+    }
+
+    void move_backward() {
+        if (direction == "N") y--;
+        else if (direction == "S") y++;
+        else if (direction == "E") x--;
+        else if (direction == "W") x++;
+        else if (direction == "Up") z--;
+        else if (direction == "Down") z++;
+        //cout<<direction<<"\n";
+    }
 };
 
 
