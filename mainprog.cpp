@@ -63,6 +63,21 @@ public:
         if (direction != "Down") direction = "Down";
         //cout<<direction<<"\n";
     }
+    void execute_commands(std::vector<std::string> commands) {
+        for (const std::string& command : commands) {
+            if (command == "f") move_forward();
+            else if (command == "b") move_backward();
+            else if (command == "l") turn_left();
+            else if (command == "r") turn_right();
+            else if (command == "u") turn_up();
+            else if (command == "d") turn_down();
+        }
+    }
+
+    void print_final_state() {
+        std::cout << "Final Position: (" << x << ", " << y << ", " << z << ")\n";
+        std::cout << "Final Direction: " << direction << "\n";
+    }
 
 };
 
