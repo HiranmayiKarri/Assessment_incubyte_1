@@ -54,6 +54,16 @@ public:
         }
         //cout<<direction<<"\n";
     }
+    void turn_up() {
+        if (direction != "Up") direction = "Up";
+        //cout<<direction<<"\n";
+    }
+
+    void turn_down() {
+        if (direction != "Down") direction = "Down";
+        //cout<<direction<<"\n";
+    }
+
 };
 
 
